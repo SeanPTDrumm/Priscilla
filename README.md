@@ -60,3 +60,16 @@ Streamlit stays on:
 - Removed the standalone Invitation page.
 - Added active **Homebrew & Common Law** with the Original Invitation and Disadvantages PDFs embedded in the app.
 - Standardized player-facing references to the DM as **Your Friendly Dungeon Master**.
+
+## v3.1 Party page
+
+The Party page now starts with first names only. Each player can:
+- upload / replace a portrait
+- write what the other passengers may have learned about their character
+- save it directly in the app
+
+No login is required.
+
+Important: Streamlit Community Cloud does not provide durable local disk storage across redeploys.
+The live entries survive normal page use, but a redeploy may reset them. Copy anything important
+into the campaign record before replacing the app again.

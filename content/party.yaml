@@ -1,23 +1,7 @@
-intro: A light pre-game roster. Sean can add portraits and public character details
-  whenever they are ready.
+intro: ''
 members:
-- player: Matt
-  character: Elysia Dawnbringer
-  blurb: Paladin · devotee of Sune
-  portrait: ''
-- player: Nick
-  character: Wiccan
-  blurb: Shadar-kai Warlock · Archfey patron
-  portrait: ''
-- player: Greg
-  character: Melvin Half-Elvin
-  blurb: Bard · wizard-for-hire, allegedly
-  portrait: ''
-- player: Jared
-  character: Dwarf Fighter
-  blurb: More coming soon.
-  portrait: ''
-- player: Bradley
-  character: Coming soon
-  blurb: More coming soon.
-  portrait: ''
+  - player: Matt
+  - player: Nick
+  - player: Greg
+  - player: Jared
+  - player: Bradley

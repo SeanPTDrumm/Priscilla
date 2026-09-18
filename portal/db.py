@@ -83,6 +83,15 @@ CREATE TABLE IF NOT EXISTS published_content (
     published INTEGER NOT NULL DEFAULT 1
 );
 
+
+CREATE TABLE IF NOT EXISTS open_party_profiles (
+    player_name TEXT PRIMARY KEY,
+    public_text TEXT NOT NULL DEFAULT '',
+    portrait_blob BLOB,
+    portrait_mime TEXT,
+    updated_at TEXT NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS dnc_state (
     singleton_id INTEGER PRIMARY KEY CHECK(singleton_id = 1),
     state_json TEXT NOT NULL,

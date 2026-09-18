@@ -74,30 +74,105 @@ def voyage(root: Path):
     st.markdown((root / "content" / "voyage.md").read_text(encoding="utf-8"))
 
 
-def party(root: Path):
-    data = load_yaml(root / "content" / "party.yaml")
-    heading("The Party", "PREGAME ROSTER")
-    if data.get("intro"):
-        st.write(data["intro"])
 
+def _party_db(root: Path):
+    from .db import Database
+    return Database(root / "data" / "portal.sqlite3")
+
+
+def _get_party_profile(root: Path, player_name: str) -> dict:
+    db = _party_db(root)
+    with db.connect() as con:
+        row = con.execute(
+            "SELECT player_name, public_text, portrait_blob, portrait_mime, updated_at "
+            "FROM open_party_profiles WHERE player_name=?",
+            (player_name,),
+        ).fetchone()
+    return dict(row) if row else {
+        "player_name": player_name,
+        "public_text": "",
+        "portrait_blob": None,
+        "portrait_mime": None,
+        "updated_at": "",
+    }
+
+
+def _save_party_profile(root: Path, player_name: str, public_text: str, upload) -> None:
+    from .db import utc_now
+    db = _party_db(root)
+    existing = _get_party_profile(root, player_name)
+    portrait_blob = existing.get("portrait_blob")
+    portrait_mime = existing.get("portrait_mime")
+    if upload is not None:
+        portrait_blob = upload.getvalue()
+        portrait_mime = upload.type or "image/png"
+
+    with db.connect() as con:
+        con.execute(
+            """INSERT INTO open_party_profiles(player_name, public_text, portrait_blob, portrait_mime, updated_at)
+               VALUES(?,?,?,?,?)
+               ON CONFLICT(player_name) DO UPDATE SET
+                 public_text=excluded.public_text,
+                 portrait_blob=excluded.portrait_blob,
+                 portrait_mime=excluded.portrait_mime,
+                 updated_at=excluded.updated_at""",
+            (player_name, public_text, portrait_blob, portrait_mime, utc_now()),
+        )
+
+
+def party(root: Path):
+    heading("The Party", "THE VOYAGE HAS ALREADY STARTED")
+    st.write(
+        "You have all been aboard the same crowded ship for about three months. "
+        "You may have become friends, barely spoken, or simply noticed each other around the ship. "
+        "Share whatever the others might reasonably have learned about your character. "
+        "A sentence is plenty. Write more if you want."
+    )
+
+    data = load_yaml(root / "content" / "party.yaml")
     members = data.get("members", [])
-    cols = st.columns(2)
+    placeholder = root / "assets" / "party_unknown.png"
+
+    cols = st.columns(3)
     for i, member in enumerate(members):
-        with cols[i % 2]:
-            portrait = member.get("portrait", "").strip()
-            if portrait:
-                p = root / "assets" / portrait
-                if p.exists():
-                    st.image(str(p), use_container_width=True)
+        player = member.get("player", "Player")
+        profile = _get_party_profile(root, player)
+        with cols[i % 3]:
             st.markdown(
-                '<div class="portal-card">'
-                f'<div class="portal-kicker">{html.escape(member.get("player",""))}</div>'
-                f'<h3>{html.escape(member.get("character","Coming soon"))}</h3>'
-                f'<div>{html.escape(member.get("blurb",""))}</div>'
-                '</div>',
+                f'<div class="portal-kicker" style="text-align:center;margin-top:.4rem;">{html.escape(player.upper())}</div>',
                 unsafe_allow_html=True,
             )
 
+            portrait_blob = profile.get("portrait_blob")
+            if portrait_blob:
+                st.image(portrait_blob, use_container_width=True)
+            elif placeholder.exists():
+                st.image(str(placeholder), use_container_width=True)
+
+            upload = st.file_uploader(
+                "Upload or replace portrait",
+                type=["png", "jpg", "jpeg", "webp"],
+                key=f"portrait_{player}",
+            )
+            text = st.text_area(
+                "What might the others know about you?",
+                value=profile.get("public_text", ""),
+                placeholder="A sentence is enough. Write more if you want.",
+                height=120,
+                key=f"party_text_{player}",
+            )
+            if st.button("Save", key=f"save_party_{player}", use_container_width=True):
+                _save_party_profile(root, player, text, upload)
+                st.success("Saved.")
+                st.rerun()
+
+            if profile.get("public_text"):
+                st.caption("Visible to everyone who opens the Party page.")
+
+    st.caption(
+        "Note: these entries are stored by the running Streamlit app. "
+        "A full app redeploy can reset them, so Your Friendly Dungeon Master should copy anything important into the campaign record."
+    )
 
 def known_world(root: Path):
     heading("Known World", "WHAT THE PARTY MAY KNOW")
