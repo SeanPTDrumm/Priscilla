@@ -53,3 +53,10 @@ Streamlit stays on:
 - Voyage Prep is the second navigation item.
 - The Invitation is viewed directly in the app; no download is required.
 - The Home harbor art was recropped as a clean wide banner.
+
+## Gold-standard content patch
+
+- Kept the current basic visual style unchanged.
+- Removed the standalone Invitation page.
+- Added active **Homebrew & Common Law** with the Original Invitation and Disadvantages PDFs embedded in the app.
+- Standardized player-facing references to the DM as **Your Friendly Dungeon Master**.

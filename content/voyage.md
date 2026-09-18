@@ -2,7 +2,7 @@
 
 Your character spent about **three months aboard a crowded passenger ship** on the way to Teralis.
 
-Before we play, give Sean **something about one NPC your character met or got to know during the voyage**.
+Before we play, give **Your Friendly Dungeon Master** something about one NPC your character met or got to know during the voyage.
 
 This can be extremely brief or as elaborate as you want. You are not being asked to write a backstory.
 
@@ -22,4 +22,4 @@ This can be extremely brief or as elaborate as you want. You are not being asked
 
 Unless you want something different, **Captain Dick Boatman gave you the map and instructions aboard ship.**
 
-If you would rather they came from somebody else, just tell Sean who. It can be the NPC above, another passenger, a sailor, or anyone else that makes sense.
+If you would rather they came from somebody else, just tell **Your Friendly Dungeon Master** who. It can be the NPC above, another passenger, a sailor, or anyone else that makes sense.

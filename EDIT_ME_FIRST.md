@@ -10,8 +10,8 @@ Home-page words.
 ### `content/voyage.md`
 Everything written on Voyage Prep.
 
-### `content/invitation.md`
-The short heading / words above the embedded invitation PDF.
+### `content/homebrew.md`
+The words above the Original Invitation and Disadvantages PDFs.
 
 ### `content/party.yaml`
 Player names, character names, blurbs, and optional portrait filenames.

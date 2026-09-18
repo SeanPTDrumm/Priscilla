@@ -46,20 +46,29 @@ def home(root: Path):
     )
 
 
-def invitation(root: Path):
-    st.markdown((root / "content" / "invitation.md").read_text(encoding="utf-8"))
-    invite = root / "assets" / "Priscilla_Player_Invite.pdf"
-    if invite.exists():
-        encoded = base64.b64encode(invite.read_bytes()).decode("utf-8")
-        components.html(
-            f'<iframe src="data:application/pdf;base64,{encoded}" '
-            'width="100%" height="980" style="border:0;border-radius:10px;"></iframe>',
-            height=995,
-            scrolling=True,
-        )
-    else:
-        empty_state(st, "The invitation PDF has not been added yet.")
+def _embedded_pdf(path: Path, height: int = 900):
+    if not path.exists():
+        empty_state(st, "This PDF has not been added yet.")
+        return
+    encoded = base64.b64encode(path.read_bytes()).decode("utf-8")
+    components.html(
+        f'<iframe src="data:application/pdf;base64,{encoded}" '
+        f'width="100%" height="{height}" style="border:0;border-radius:10px;"></iframe>',
+        height=height + 15,
+        scrolling=True,
+    )
 
+
+def homebrew_common_law(root: Path):
+    st.markdown((root / "content" / "homebrew.md").read_text(encoding="utf-8"))
+
+    invite = root / "assets" / "Priscilla_Player_Invite.pdf"
+    with st.expander("View the Original Invitation", expanded=True):
+        _embedded_pdf(invite, height=880)
+
+    disadvantages = root / "assets" / "Priscilla_Disadvantages.pdf"
+    with st.expander("View Disadvantages for Bonus Feats", expanded=False):
+        _embedded_pdf(disadvantages, height=880)
 
 def voyage(root: Path):
     st.markdown((root / "content" / "voyage.md").read_text(encoding="utf-8"))
