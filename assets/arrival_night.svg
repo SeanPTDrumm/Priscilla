@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="680" viewBox="0 0 1600 680">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#07111f"/>
+    <stop offset="0.55" stop-color="#14253c"/>
+    <stop offset="1" stop-color="#6d3d32"/>
+  </linearGradient>
+  <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#17293a"/>
+    <stop offset="1" stop-color="#05090d"/>
+  </linearGradient>
+  <radialGradient id="glow">
+    <stop offset="0" stop-color="#ffd78a" stop-opacity=".95"/>
+    <stop offset="1" stop-color="#f4a33e" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="1600" height="680" fill="url(#sky)"/>
+<circle cx="1240" cy="125" r="47" fill="#f7e7bd" opacity=".88"/>
+<circle cx="1258" cy="110" r="47" fill="#0b1625" opacity=".72"/>
+<g fill="#d5d8dc" opacity=".72">
+  <circle cx="165" cy="95" r="2"/><circle cx="260" cy="135" r="2"/><circle cx="395" cy="70" r="2"/>
+  <circle cx="520" cy="128" r="2"/><circle cx="705" cy="83" r="2"/><circle cx="850" cy="148" r="2"/>
+  <circle cx="1030" cy="74" r="2"/><circle cx="1360" cy="98" r="2"/><circle cx="1460" cy="156" r="2"/>
+</g>
+<!-- distant city -->
+<path d="M0 428 L140 405 L260 421 L375 392 L485 410 L610 382 L720 402 L840 375 L960 398 L1100 370 L1250 395 L1390 365 L1600 390 L1600 520 L0 520 Z" fill="#0a0d12"/>
+<g fill="#c88a43" opacity=".72">
+  <rect x="1110" y="385" width="5" height="8"/><rect x="1145" y="395" width="5" height="8"/>
+  <rect x="1190" y="379" width="5" height="8"/><rect x="1220" y="392" width="5" height="8"/>
+  <rect x="1290" y="383" width="5" height="8"/><rect x="1325" y="390" width="5" height="8"/>
+  <rect x="1370" y="374" width="5" height="8"/><rect x="1410" y="392" width="5" height="8"/>
+</g>
+<!-- Great Chain towers -->
+<g fill="#05070a">
+  <rect x="310" y="312" width="62" height="178"/><path d="M297 312 L383 312 L340 270 Z"/>
+  <rect x="935" y="303" width="64" height="188"/><path d="M922 303 L1012 303 L967 258 Z"/>
+</g>
+<g>
+  <circle cx="340" cy="274" r="52" fill="url(#glow)"/><circle cx="967" cy="262" r="52" fill="url(#glow)"/>
+  <path d="M327 282 C340 245 355 265 349 287 C343 301 333 300 327 282 Z" fill="#ffb24d"/>
+  <path d="M954 270 C968 234 982 252 977 276 C969 290 960 289 954 270 Z" fill="#ffb24d"/>
+</g>
+<!-- water -->
+<rect y="485" width="1600" height="195" fill="url(#sea)"/>
+<g stroke="#8e6a48" stroke-width="3" opacity=".32">
+  <line x1="250" y1="530" x2="520" y2="530"/><line x1="680" y1="558" x2="990" y2="558"/>
+  <line x1="1080" y1="520" x2="1410" y2="520"/><line x1="90" y1="606" x2="420" y2="606"/>
+</g>
+<!-- arriving ship -->
+<g fill="#04070a" transform="translate(640 370)">
+  <path d="M0 110 L290 110 L250 150 L45 150 Z"/>
+  <rect x="125" y="0" width="9" height="118"/>
+  <path d="M134 9 L235 72 L134 72 Z"/>
+  <path d="M124 25 L40 85 L124 85 Z"/>
+  <rect x="82" y="80" width="145" height="6"/>
+</g>
+<!-- foreground dock -->
+<path d="M0 625 L390 585 L560 680 L0 680 Z" fill="#050608"/>
+<g stroke="#111820" stroke-width="8"><line x1="145" y1="575" x2="145" y2="680"/><line x1="285" y1="565" x2="285" y2="680"/></g>
+<text x="75" y="92" fill="#ead9b4" font-family="Georgia,serif" font-size="34" letter-spacing="8">SYDIRE HARBOR</text>
+<text x="78" y="132" fill="#bda98b" font-family="Georgia,serif" font-size="20" font-style="italic">a few hours before dawn</text>
+</svg>

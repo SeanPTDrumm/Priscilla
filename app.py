@@ -1,324 +1,349 @@
 from pathlib import Path
-import random
+import base64
+import html
 import streamlit as st
+import streamlit.components.v1 as components
 
 BASE = Path(__file__).parent
 ASSETS = BASE / "assets"
 
 st.set_page_config(
     page_title="Priscilla, Queen of the Desert",
-    page_icon="🎲",
+    page_icon="🌙",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
-# ---------- styling ----------
+# ---------- visual system ----------
 st.markdown("""
 <style>
-    .stApp {
-        background: #efe2bf;
-        color: #271d17;
-    }
-    [data-testid="stSidebar"] {
-        background: #1d1714;
-    }
-    [data-testid="stSidebar"] * {
-        color: #f1e2bd;
-    }
-    h1, h2, h3 {
-        color: #741b16;
-        font-family: Georgia, 'Times New Roman', serif;
-    }
-    .priscilla-card {
-        background: rgba(255,255,255,.34);
-        border: 1px solid rgba(87,55,28,.35);
-        border-radius: 14px;
-        padding: 1.1rem 1.2rem;
-        margin: .5rem 0 1rem 0;
-        box-shadow: 0 2px 10px rgba(55,35,20,.08);
-    }
-    .locked {
-        opacity: .7;
-        border: 1px dashed rgba(116,27,22,.55);
-        border-radius: 12px;
-        padding: 1rem;
-        background: rgba(116,27,22,.05);
-    }
-    .smallcaps {
-        letter-spacing: .12em;
-        text-transform: uppercase;
-        font-size: .78rem;
-        font-weight: 700;
-    }
-    .quote {
-        font-family: Georgia, 'Times New Roman', serif;
-        font-style: italic;
-        font-size: 1.08rem;
-        color: #5b4030;
-    }
+:root {
+  --ink:#241b16;
+  --red:#741b16;
+  --gold:#b7863a;
+  --paper:#efe2bf;
+  --paper2:#f7edcf;
+  --night:#111a28;
+}
+.stApp {
+  background:
+    radial-gradient(circle at top right, rgba(135,91,48,.10), transparent 28rem),
+    linear-gradient(180deg, #f3e8c8 0%, #eadab1 100%);
+  color:var(--ink);
+}
+[data-testid="stSidebar"] {
+  background: linear-gradient(180deg,#111722 0%,#1b1819 100%);
+  border-right:1px solid rgba(183,134,58,.35);
+}
+[data-testid="stSidebar"] * { color:#f0e2bf; }
+[data-testid="stSidebar"] .stRadio label { padding:.25rem 0; }
+.block-container { padding-top:1.25rem; max-width:1180px; }
+h1,h2,h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color:var(--red);
+}
+.hero-wrap {
+  border:1px solid rgba(183,134,58,.55);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 12px 34px rgba(26,18,12,.18);
+  margin-bottom:1rem;
+  background:#101721;
+}
+.session-card {
+  background:linear-gradient(135deg,#751d18,#401819);
+  color:#fff5dc;
+  border:1px solid rgba(255,221,150,.35);
+  border-radius:16px;
+  padding:1rem 1.25rem;
+  box-shadow:0 8px 22px rgba(65,20,17,.20);
+}
+.session-card .big {font:700 1.55rem Georgia,serif;}
+.session-card .small {color:#ecd7ab; letter-spacing:.05em;}
+.portal-card {
+  background:rgba(255,255,255,.36);
+  border:1px solid rgba(83,56,32,.28);
+  border-radius:15px;
+  padding:1rem 1.1rem;
+  min-height:150px;
+  box-shadow:0 4px 15px rgba(63,42,24,.07);
+}
+.portal-card h3 {margin:.1rem 0 .5rem 0;}
+.portal-card.locked {
+  background:rgba(56,47,44,.08);
+  border-style:dashed;
+  opacity:.78;
+}
+.eyebrow {
+  color:#7b5d36;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:.76rem;
+  font-weight:700;
+}
+.soft {
+  color:#665447;
+}
+.voyage-prompt {
+  padding:1rem 1.15rem;
+  border-left:4px solid #8c2820;
+  background:rgba(255,255,255,.28);
+  border-radius:8px;
+}
+.example {
+  background:rgba(112,74,39,.07);
+  border-radius:10px;
+  padding:.65rem .8rem;
+  margin:.35rem 0;
+}
+.party-card {
+  padding:.9rem 1rem;
+  border:1px solid rgba(87,55,28,.25);
+  border-radius:12px;
+  background:rgba(255,255,255,.32);
+  margin-bottom:.65rem;
+}
+footer {visibility:hidden;}
 </style>
 """, unsafe_allow_html=True)
 
-def img(name, caption=None, use_container_width=True):
-    p = ASSETS / name
-    if p.exists():
-        st.image(str(p), caption=caption, use_container_width=use_container_width)
+def asset_path(name):
+    return ASSETS / name
 
-def download_asset(filename, label):
-    p = ASSETS / filename
+def show_svg(name):
+    p = asset_path(name)
+    if p.exists():
+        st.image(str(p), use_container_width=True)
+
+def download_file(name, label):
+    p = asset_path(name)
     if p.exists():
         with open(p, "rb") as f:
-            st.download_button(label, f, file_name=filename)
+            st.download_button(label, f, file_name=p.name, use_container_width=True)
+
+def render_pdf(name, height=890):
+    p = asset_path(name)
+    if not p.exists():
+        st.warning("PDF asset not found.")
+        return
+    data = base64.b64encode(p.read_bytes()).decode("utf-8")
+    components.html(
+        f'<iframe src="data:application/pdf;base64,{data}" '
+        f'width="100%" height="{height}" style="border:0;border-radius:12px;"></iframe>',
+        height=height + 10,
+        scrolling=True,
+    )
 
 # ---------- navigation ----------
 st.sidebar.markdown("## PRISCILLA")
-st.sidebar.caption("Queen of the Desert")
+st.sidebar.caption("QUEEN OF THE DESERT")
 page = st.sidebar.radio(
-    "Navigate",
-    [
-        "Home",
-        "Before You Arrive",
-        "Voyage Prep",
-        "Magic Items",
-        "Dingoes & Crowns",
-        "Known World",
-        "Locked",
-    ],
+    "Portal",
+    ["Home", "The Invitation", "The Voyage", "The Party", "Known World", "Coming Soon"],
     label_visibility="collapsed",
 )
-
 st.sidebar.markdown("---")
-st.sidebar.caption("Player portal • D&D 2024 • Level 3")
+st.sidebar.markdown("**Sundays · 6:00 PM**")
+st.sidebar.caption("Wrap by 8:30–9:00 PM at the latest.")
 
 # ---------- home ----------
 if page == "Home":
-    img("title_page.png")
+    st.markdown('<div class="eyebrow">Player Portal</div>', unsafe_allow_html=True)
+    show_svg("arrival_night.svg")
+
+    st.markdown("""
+    <div class="session-card">
+      <div class="small">OUR REGULAR GAME</div>
+      <div class="big">Sunday · 6:00 PM</div>
+      <div>We will wrap by <b>8:30–9:00 PM at the latest.</b></div>
+    </div>
+    """, unsafe_allow_html=True)
+
     st.markdown("## Welcome to Teralis")
-    st.markdown(
-        """
-        You crossed an ocean to get here.
-
-        A few hours before dawn, your ship entered the crowded harbor of **Sydire**.
-        You arrived with whatever you could carry, a few dubious stories about the
-        country beyond its walls, and a map whose usefulness remains to be seen.
-        """
+    st.write(
+        "A few hours before dawn, your ship entered the crowded harbor of Sydire. "
+        "This portal is the place for campaign handouts, the map, pre-game odds and ends, "
+        "and — once play begins — the things your party discovers."
     )
-    st.markdown(
-        """
-        <div class="priscilla-card">
-        <div class="smallcaps">The instruction you can read clearly</div>
-        <h3 style="margin-bottom:.2rem;">GO TO THE BLUE OYSTER INN.</h3>
-        <h3 style="margin:.2rem 0;">ASK FOR LAVINE.</h3>
-        <h3 style="margin:.2rem 0;">SAY THE CAPTAIN SENT YOU.</h3>
-        <p>Someone there is waiting for you. <b>And they have 50 gold pieces.</b></p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-    st.caption("You know almost nothing about Teralis. That is intentional.")
 
-# ---------- before you arrive ----------
-elif page == "Before You Arrive":
-    st.title("Before You Arrive")
-    st.markdown("### Build the fun stuff")
-    c1, c2 = st.columns(2)
+    st.markdown("### What you need now")
+    c1, c2, c3 = st.columns(3)
     with c1:
-        st.markdown("**Level 3**")
-        st.markdown("**D&D 2024 rules**")
-        st.markdown("**Standard Array or Point Buy**")
+        st.markdown("""
+        <div class="portal-card">
+          <div class="eyebrow">Available now</div>
+          <h3>The Invitation</h3>
+          <p>The original campaign invite, character setup, Discord and D&D Beyond links.</p>
+        </div>
+        """, unsafe_allow_html=True)
     with c2:
-        st.markdown("**You are an outsider.**")
-        st.markdown("Your character has recently arrived from overseas.")
-    st.markdown(
-        """
-        **Backstory:** loose concepts are welcome. This should not feel like homework.
+        st.markdown("""
+        <div class="portal-card">
+          <div class="eyebrow">One tiny bit of homework</div>
+          <h3>The Voyage</h3>
+          <p>Give Sean one person your character met during the crossing. One sentence is enough.</p>
+        </div>
+        """, unsafe_allow_html=True)
+    with c3:
+        st.markdown("""
+        <div class="portal-card">
+          <div class="eyebrow">Player reference</div>
+          <h3>Known World</h3>
+          <p>Your starting map and the bits of Teralis the party is allowed to know.</p>
+        </div>
+        """, unsafe_allow_html=True)
 
-        **Quirks:** small habits, preferences, superstitions, mannerisms, beliefs,
-        physical oddities, or other details that make the character feel like a person.
-        Start with a couple; you may eventually have five.
+    st.markdown("### This portal will grow with the campaign")
+    d1, d2, d3, d4 = st.columns(4)
+    for col, title, text in [
+        (d1, "🎲 Dingoes & Crowns", "Interactive table game — coming soon."),
+        (d2, "📖 Campaign Log", "Sessions, choices and consequences."),
+        (d3, "🧭 People & Places", "Faces and locations you discover."),
+        (d4, "✉️ Letters & Handouts", "Clues, notes, documents and other suspicious paperwork."),
+    ]:
+        with col:
+            st.markdown(
+                f'<div class="portal-card locked"><div class="eyebrow">Coming soon</div>'
+                f'<h3>{title}</h3><p>{text}</p></div>',
+                unsafe_allow_html=True,
+            )
 
-        **A little something extra:** every character begins with one special magic item
-        at DM discretion.
+# ---------- invitation ----------
+elif page == "The Invitation":
+    st.title("The Invitation")
+    st.write("The original player invitation and pre-game setup, kept here so nobody has to hunt for it.")
+    download_file("player_invite.pdf", "Download the original invitation")
+    with st.expander("View the invitation here", expanded=True):
+        render_pdf("player_invite.pdf")
 
-        **Optional disadvantage:** one meaningful mechanical Disadvantage may be taken
-        in exchange for one additional Feat.
-        """
-    )
-    col1, col2 = st.columns(2)
-    with col1:
-        download_asset("player_invite.pdf", "Download Player Invite")
-    with col2:
-        download_asset("disadvantages.pdf", "Download Disadvantages Handout")
+# ---------- voyage ----------
+elif page == "The Voyage":
+    show_svg("voyage_night.svg")
+    st.title("Someone You Met on the Voyage")
+    st.markdown("""
+    <div class="voyage-prompt">
+      Your character spent roughly <b>three months aboard a crowded passenger ship</b> before reaching Teralis.
+      Give Sean <b>one person your character met or got to know during the crossing.</b>
+      <br><br>
+      This does not need to be a backstory. A vague sentence is completely fine.
+      If inspiration strikes, you can make them as elaborate as you want.
+    </div>
+    """, unsafe_allow_html=True)
 
-# ---------- voyage prep ----------
-elif page == "Voyage Prep":
-    st.title("The Voyage")
-    st.markdown(
-        """
-        The crossing took roughly **three months**. You do not need to write a novella.
-        Give Sean a few useful hooks and we can build the rest together.
-        """
-    )
-    with st.form("voyage_form"):
-        character = st.text_input("Character name")
-        why = st.text_area(
-            "Why did your character make the voyage to Teralis?",
-            placeholder="Adventure? Exile? Following someone? Running from something? Starting over?",
-        )
-        npc = st.text_area(
-            "Who did you meet and get to know aboard the crowded passenger ship?",
-            placeholder="A name and a sentence or two is plenty. Invent them or leave Sean room to help.",
-        )
-        map_origin = st.text_area(
-            "How did the map / Blue Oyster instruction reach you?",
-            placeholder="Optional. If you leave this blank, Captain Dick Boatman handed it to you.",
-        )
-        submitted = st.form_submit_button("Prepare my voyage note")
-    if submitted:
-        map_text = map_origin.strip() or "Captain Dick Boatman handed it to me aboard ship."
-        note = f"""PRISCILLA — VOYAGE NOTE
-
-Character: {character or "[unnamed]"}
-
-WHY I CAME TO TERALIS
-{why or "[not answered]"}
-
-SOMEONE I MET ABOARD SHIP
-{npc or "[not answered]"}
-
-HOW I GOT THE MAP
-{map_text}
-"""
-        st.success("Done. Download this and send it to Sean.")
-        st.download_button(
-            "Download voyage note",
-            note,
-            file_name=f"{(character or 'character').replace(' ', '_')}_voyage_note.txt",
-        )
-
-# ---------- magic items ----------
-elif page == "Magic Items":
-    st.title("A Little Something Extra")
-    st.caption("Each character begins with one special magic item.")
-
-    items = [
-        ("Melvin Half-Elvin", "Melvin's Hat", "melvins_hat.png",
-         "+1 Charisma (maximum 20), plus a once-per-dawn reach into the hat for a random prize."),
-        ("Jared's Dwarf Fighter", "The Red Pike", "red_pike.png",
-         "+1 magical pike. A grisly finishing blow can frighten nearby foes."),
-        ("Druid", "The Many-Shaped Clasp", "many_shaped_clasp.png",
-         "+1 attack and damage while Wild Shaped, a lingering beast trait after shifting, and one Instinctive Shift per Long Rest."),
+    st.markdown("### Easy examples")
+    examples = [
+        "An older passenger I played cards with most nights.",
+        "A sailor I drank with a few times. We liked each other well enough.",
+        "A merchant who annoyed me for almost the entire crossing.",
+        "A kid who kept asking questions about my weapon.",
+        "Someone who was terribly seasick and I ended up helping.",
+        "A passenger I became genuinely close to. I have more ideas about them.",
+        "I know almost nothing yet — just that we talked often on deck at night.",
     ]
-    for owner, title, image_name, blurb in items:
-        st.markdown(f"### {title}")
-        st.caption(owner)
-        cols = st.columns([1.2, 1])
-        with cols[0]:
-            img(image_name)
-        with cols[1]:
-            st.markdown(f'<div class="priscilla-card">{blurb}</div>', unsafe_allow_html=True)
+    for ex in examples:
+        st.markdown(f'<div class="example">“{ex}”</div>', unsafe_allow_html=True)
 
-    st.markdown("### Sune's Hand Mirror")
-    st.caption("Elysia Dawnbringer")
-    st.markdown(
-        """
-        <div class="priscilla-card">
-        <b>Grace of Sune:</b> +1 Charisma, maximum 20.<br><br>
-        <b>Allure:</b> once per Short Rest.<br>
-        <b>Heartthrob:</b> once per Long Rest.<br>
-        <b>The Cruel Reflection:</b> a proposed last-resort use of <i>Suggestion</i>.
-        </div>
-        """,
-        unsafe_allow_html=True,
+    st.caption("No name required. No stat block. No essay. One useful hook is enough.")
+
+    st.markdown("### How did you get the instructions?")
+    st.write(
+        "**Default:** Captain Dick Boatman gave you the map / instructions aboard ship. "
+        "You do not need to invent anything else."
+    )
+    st.write(
+        "If you would rather have received them from someone else, tell Sean who — "
+        "the NPC above, another passenger, a sailor, somebody waiting at a previous port, etc."
     )
 
-    st.markdown("### Sickle of the First Court")
-    st.caption("Wiccan")
-    st.markdown(
-        """
-        <div class="priscilla-card">
-        A ritual sickle and spellcasting focus tied to the First Court. It grants +1 to
-        spell attacks, manifests Wiccan's spectral hand, and can borrow unpredictable
-        magical power.
-        </div>
-        """,
-        unsafe_allow_html=True,
+    with st.form("voyage_note"):
+        character = st.text_input("Character name (optional)")
+        npc = st.text_area(
+            "The person I met on the voyage",
+            placeholder="One sentence is enough. Or write a lot. Entirely up to you.",
+            height=120,
+        )
+        use_default = st.checkbox(
+            "Captain Dick Boatman gave me the map / instructions.",
+            value=True,
+        )
+        other_source = ""
+        if not use_default:
+            other_source = st.text_input("Who gave them to you instead?")
+        submit = st.form_submit_button("Make my voyage note")
+
+    if submit:
+        source = "Captain Dick Boatman." if use_default else (other_source.strip() or "[not decided yet]")
+        note = (
+            f"PRISCILLA — VOYAGE NOTE\n\n"
+            f"Character: {character.strip() or '[not provided]'}\n\n"
+            f"Someone I met on the voyage:\n{npc.strip() or '[not provided]'}\n\n"
+            f"Who gave me the map / instructions:\n{source}\n"
+        )
+        st.success("That is plenty.")
+        st.code(note, language=None)
+        st.download_button(
+            "Download this note",
+            note,
+            file_name=f"{(character.strip() or 'priscilla')}_voyage_note.txt".replace(" ", "_"),
+            use_container_width=True,
+        )
+
+# ---------- party ----------
+elif page == "The Party":
+    st.title("The Party")
+    st.write(
+        "A light pre-game roster for now. This page can get portraits, public character blurbs "
+        "and whatever else feels useful before Session 1."
     )
 
-# ---------- Dingoes & Crowns ----------
-elif page == "Dingoes & Crowns":
-    st.title("Dingoes & Crowns")
-    st.markdown(
-        """
-        A table game played with **3d6**.
-
-        **ANTE → CALL & COVER → THROW → PAY**
-        """
-    )
-
-    if "dc_roll" not in st.session_state:
-        st.session_state.dc_roll = None
-
-    if st.button("🎲 THROW THE DICE", type="primary", use_container_width=True):
-        dice = [random.randint(1, 6) for _ in range(3)]
-        st.session_state.dc_roll = dice
-
-    if st.session_state.dc_roll:
-        dice = st.session_state.dc_roll
-        a, b, c = dice
-        st.metric("Throw", f"{a}  •  {b}  •  {c}")
-        counts = {n: dice.count(n) for n in set(dice)}
-        if len(counts) == 1:
-            st.success("CROWN — three of a kind.")
-        elif 2 in counts.values():
-            st.info("PAIR — two dice match.")
-        elif sorted(dice) in ([1,2,3],[2,3,4],[3,4,5],[4,5,6]):
-            st.success("ROAD — a three-number run.")
-        else:
-            st.warning("DINGOES — no Crown, Pair, or Road.")
-
-    st.markdown(
-        """
-        <div class="priscilla-card">
-        <b>Current table concept:</b> NPCs can originate or cover side bets.
-        This page is intentionally lightweight until the final betting/pay rules are locked.
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    known = [
+        ("Matt", "Elysia Dawnbringer", "Paladin · devotee of Sune"),
+        ("Nick", "Wiccan", "Shadar-kai Warlock · Archfey patron"),
+        ("Greg", "Melvin Half-Elvin", "Bard · wizard-for-hire, allegedly"),
+        ("Jared", "Dwarf Fighter", "Name / public introduction coming soon"),
+        ("Bradley", "Character card coming soon", "Details still being added"),
+    ]
+    cols = st.columns(2)
+    for i, (player, pc, blurb) in enumerate(known):
+        with cols[i % 2]:
+            st.markdown(
+                f'<div class="party-card"><div class="eyebrow">{html.escape(player)}</div>'
+                f'<h3>{html.escape(pc)}</h3><div class="soft">{html.escape(blurb)}</div></div>',
+                unsafe_allow_html=True,
+            )
 
 # ---------- known world ----------
 elif page == "Known World":
-    st.title("What You Know")
-    st.markdown(
-        """
-        Your character is an outsider. What they know may be rumor, scholarship,
-        religion, old sailors' tales, or something learned before the crossing.
-        Different characters may know different things.
-        """
+    st.title("Known World")
+    st.write(
+        "You are outsiders. What your characters know may be rumor, scholarship, religion, "
+        "old sailors' tales, or something learned before the crossing. Different characters "
+        "may know different things."
     )
-    img("map.png", caption="Your starting map")
+    p = asset_path("map.png")
+    if p.exists():
+        st.image(str(p), caption="Your starting map", use_container_width=True)
+        with open(p, "rb") as f:
+            st.download_button("Download the map", f, file_name="Teralis_starting_map.png", use_container_width=True)
     with st.expander("Road Moas"):
-        img("moas.png")
         st.write("Large flightless draft birds used for overland travel in Teralis.")
+        p2 = asset_path("moas.png")
+        if p2.exists():
+            st.image(str(p2), use_container_width=True)
 
-# ---------- locked ----------
-elif page == "Locked":
-    st.title("Beyond Sydire")
-    st.markdown(
-        """
-        <div class="locked">
-        🔒 <b>Locations</b><br>
-        More of Teralis will appear here as you discover it.
-        </div><br>
-        <div class="locked">
-        🔒 <b>People & Factions</b><br>
-        Names, faces and relationships will unlock through play.
-        </div><br>
-        <div class="locked">
-        🔒 <b>Campaign Journal</b><br>
-        Your story has not happened yet.
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+# ---------- coming soon ----------
+elif page == "Coming Soon":
+    st.title("Coming Soon")
+    st.write("You can see the doors. Most of them are not open yet.")
+    cards = [
+        ("🎲 Dingoes & Crowns", "An interactive version of Teralis's extremely reputable dice game."),
+        ("📖 Campaign Log", "A player-facing record of sessions, major choices and the road behind you."),
+        ("🧭 People & Places", "NPCs, cities, inns, shops and landmarks as the party encounters them."),
+        ("✉️ Letters & Handouts", "Documents, clues, invitations, notices and other things somebody probably should not have written down."),
+    ]
+    for title, body in cards:
+        st.markdown(
+            f'<div class="portal-card locked"><div class="eyebrow">Locked</div>'
+            f'<h3>{title}</h3><p>{body}</p></div>',
+            unsafe_allow_html=True,
+        )

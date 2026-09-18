@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520">
+<defs>
+ <linearGradient id="vsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#07101d"/><stop offset=".7" stop-color="#18324b"/><stop offset="1" stop-color="#7b4b3a"/></linearGradient>
+ <linearGradient id="vsea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#28445a"/><stop offset="1" stop-color="#071018"/></linearGradient>
+</defs>
+<rect width="1400" height="520" fill="url(#vsky)"/>
+<g fill="#d9dde2" opacity=".8">
+ <circle cx="100" cy="70" r="2"/><circle cx="220" cy="125" r="2"/><circle cx="360" cy="62" r="2"/><circle cx="520" cy="115" r="2"/>
+ <circle cx="720" cy="72" r="2"/><circle cx="900" cy="128" r="2"/><circle cx="1080" cy="76" r="2"/><circle cx="1260" cy="118" r="2"/>
+</g>
+<circle cx="1120" cy="92" r="38" fill="#efe0ba" opacity=".85"/>
+<rect y="330" width="1400" height="190" fill="url(#vsea)"/>
+<g fill="#030609" transform="translate(445 180)">
+ <path d="M0 150 L500 150 L455 205 L65 205 Z"/>
+ <rect x="235" y="0" width="10" height="158"/>
+ <path d="M245 10 L405 100 L245 100 Z"/>
+ <path d="M235 35 L90 115 L235 115 Z"/>
+ <rect x="128" y="112" width="275" height="8"/>
+</g>
+<g stroke="#b78b5b" stroke-width="3" opacity=".3"><line x1="110" y1="400" x2="470" y2="400"/><line x1="640" y1="445" x2="1080" y2="445"/><line x1="990" y1="380" x2="1300" y2="380"/></g>
+<text x="70" y="80" fill="#ead9b4" font-family="Georgia,serif" font-size="34" letter-spacing="7">THE CROSSING</text>
+<text x="72" y="120" fill="#c4b293" font-family="Georgia,serif" font-size="21" font-style="italic">three months aboard a crowded passenger ship</text>
+</svg>

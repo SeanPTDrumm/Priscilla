@@ -1,44 +1,46 @@
-# Priscilla Player Portal
+# Priscilla Player Portal — V2
 
-Player-facing Streamlit portal for **Priscilla, Queen of the Desert**.
+A lightweight player-facing hub for **Priscilla, Queen of the Desert**.
 
-## What is included
+This version intentionally removes character-management and magic-item sections.
+The immediate purpose is to give the players one attractive place for:
 
-- Branded campaign home page
-- Before You Arrive / player handouts
-- Voyage Prep form with downloadable player note
-- Magic item gallery
-- Dingoes & Crowns 3d6 prototype
-- Starting map / Road Moas
-- Locked teaser sections for future campaign discoveries
+- the recurring Sunday schedule
+- the original invitation
+- one low-pressure Voyage prompt
+- a light Party roster
+- the starting map / Known World
+- visible locked sections that will open as the campaign develops
 
-## Files
+## Schedule shown in the app
 
-- `app.py` — the Streamlit app
-- `requirements.txt` — dependencies
-- `assets/` — current campaign art and handouts
+**Sunday — 6:00 PM**
 
-## Run locally
+Wrap by **8:30–9:00 PM at the latest**.
 
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
+## Replace the existing GitHub files
 
-## Deploy with Streamlit Community Cloud
+Upload the contents of this folder into the root of the existing `Priscilla` repository.
 
-1. Put these files in your GitHub repository.
-2. In Streamlit Community Cloud, create a new app.
-3. Choose the repository and branch.
-4. Set the main file path to `app.py`.
-5. Deploy.
+Replace:
+- `app.py`
+- `README.md`
+- `requirements.txt`
 
-## Important design rule
+Keep/upload the included `assets/` files.
 
-This is the **player portal**, not the DM Codex. Do not add unrevealed campaign canon,
-DM notes, succession material, or hidden NPC information here.
+Streamlit should continue using:
 
-## Current intentionally unfinished area
+- Branch: `main`
+- Main file path: `app.py`
 
-The full betting / payout rules for **Dingoes & Crowns** are not yet locked. The current
-page provides the shared 3d6 throw and identifies Crown / Pair / Road / Dingoes.
+Once GitHub commits the replacement, Streamlit Community Cloud should normally rebuild automatically.
+
+## Easy art swaps later
+
+The two portal-specific banner files are:
+
+- `assets/arrival_night.svg`
+- `assets/voyage_night.svg`
+
+They are intentionally separate from the app code so they can be replaced later with finished approved campaign paintings without rewriting the app.
