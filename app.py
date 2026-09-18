@@ -27,8 +27,8 @@ repo = PortalRepository(db)
 
 page_defs = [
     st.Page(lambda: public_pages.home(ROOT), title="Home", icon="🏠", url_path="home", default=True),
-    st.Page(lambda: public_pages.invitation(ROOT), title="The Invitation", icon="✉️", url_path="invitation"),
     st.Page(lambda: public_pages.voyage(ROOT), title="Voyage Prep", icon="⛵", url_path="voyage"),
+    st.Page(lambda: public_pages.invitation(ROOT), title="The Invitation", icon="✉️", url_path="invitation"),
     st.Page(lambda: public_pages.party(ROOT), title="The Party", icon="🛡️", url_path="party"),
     st.Page(lambda: public_pages.known_world(ROOT), title="Known World", icon="🗺️", url_path="known-world"),
 

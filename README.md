@@ -46,3 +46,10 @@ replacing matching files.
 Streamlit stays on:
 - branch: `main`
 - main file: `app.py`
+
+
+## Current small revisions
+
+- Voyage Prep is the second navigation item.
+- The Invitation is viewed directly in the app; no download is required.
+- The Home harbor art was recropped as a clean wide banner.

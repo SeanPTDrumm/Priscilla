@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 from pathlib import Path
+import base64
 import html
 import yaml
 import streamlit as st
+import streamlit.components.v1 as components
 
 from .ui import empty_state
 
@@ -45,17 +47,18 @@ def home(root: Path):
 
 
 def invitation(root: Path):
-    heading("The Invitation", "ORIGINAL PLAYER INVITE")
-    st.write("The original campaign invitation is here whenever you need it.")
+    st.markdown((root / "content" / "invitation.md").read_text(encoding="utf-8"))
     invite = root / "assets" / "Priscilla_Player_Invite.pdf"
     if invite.exists():
-        st.download_button(
-            "Download the original invitation",
-            invite.read_bytes(),
-            file_name="Priscilla_Player_Invite.pdf",
-            mime="application/pdf",
-            use_container_width=True,
+        encoded = base64.b64encode(invite.read_bytes()).decode("utf-8")
+        components.html(
+            f'<iframe src="data:application/pdf;base64,{encoded}" '
+            'width="100%" height="980" style="border:0;border-radius:10px;"></iframe>',
+            height=995,
+            scrolling=True,
         )
+    else:
+        empty_state(st, "The invitation PDF has not been added yet.")
 
 
 def voyage(root: Path):

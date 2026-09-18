@@ -1,26 +1,41 @@
 # EDIT ME FIRST
 
-You normally should not need to touch `app.py`.
+You can change the normal wording and images without editing Python.
 
-## Change the Sunday time
-Edit `content/settings.yaml`.
+## The files you are most likely to edit
 
-## Rewrite Voyage Prep
-Edit `content/voyage.md`.
+### `content/home.md`
+Home-page words.
 
-## Edit The Party
-Edit `content/party.yaml`.
+### `content/voyage.md`
+Everything written on Voyage Prep.
 
-To add a portrait:
-1. upload the image to `assets/`
-2. put its filename in that player's `portrait:` field
+### `content/invitation.md`
+The short heading / words above the embedded invitation PDF.
 
-## Change the home picture
-Upload the new picture to `assets/`, then change `home_hero:` in `content/settings.yaml`.
+### `content/party.yaml`
+Player names, character names, blurbs, and optional portrait filenames.
 
-## Change locked-page wording
-Edit `content/coming_soon.yaml`.
+### `content/settings.yaml`
+Session time wording and the filename of the home image.
 
-## Dingoes & Crowns
-It is intentionally locked. The original working D&C code is still preserved in
+### `content/coming_soon.yaml`
+Words shown on locked pages.
+
+### `assets/`
+Images, PDFs, maps and portraits.
+
+## Changing an image
+
+Upload the replacement image into `assets/`.
+
+For the Home image, either:
+- replace `assets/home_harbor_night.png` with another image using the same filename, or
+- change `home_hero:` in `content/settings.yaml`.
+
+## Important
+
+You normally should **not** need to edit `app.py`.
+
+Dingoes & Crowns is intentionally locked. Its original working code remains preserved in
 `portal/pages.py`.
