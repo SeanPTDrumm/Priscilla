@@ -1,0 +1,8 @@
+# Prototype side-bet prompts. These are optional table wagers, not core Dingoes & Crowns rules.
+bets:
+  - "At least one die shows a 6."
+  - "The total is odd."
+  - "The total is 10 or higher."
+  - "At least two dice match."
+  - "All three dice are different."
+  - "The throw contains both an odd and an even die."

@@ -1,0 +1,60 @@
+categories:
+  Cognitive & Psychological:
+    - name: Simple-Minded
+      roleplay: The character struggles with complex concepts, takes metaphors literally, or has a terrible memory. You can choose a specific flavor of simplicity.
+      mechanics: You suffer a -1 penalty to Intelligence. You also have Disadvantage on Intelligence (Investigation) and Intelligence (History) checks.
+    - name: Fractured Psyche
+      roleplay: The character struggles with reality, such as whispers, intense paranoia, or hallucinatory overlays.
+      mechanics: You have Disadvantage on saving throws against the Frightened and Charmed conditions, and against any spell from the Illusion school.
+    - name: Severe Phobia
+      roleplay: A debilitating terror regarding a specific, moderately common element such as Fire, Darkness, Beasts, Undead, or Heights.
+      mechanics: When initiative is rolled and the trigger is visible or heavily present within 30 feet, make a DC 13 Wisdom save. On a failure, begin combat Frightened for 1 minute; repeat the save at the end of each turn.
+    - name: Craven
+      roleplay: Self-preservation completely overrides heroism.
+      mechanics: You have Disadvantage on Initiative rolls and cannot Dash if that movement would bring you closer to a hostile creature.
+    - name: Compulsive Greed
+      roleplay: The character cannot resist hoarding wealth and may take unnecessary risks for valuables.
+      mechanics: You have Disadvantage on Wisdom (Insight) during financial negotiations. Out of combat, seemingly unguarded valuables can trigger a DC 13 Wisdom save or compel you to approach and secure them.
+  Physical:
+    - name: Clouded Sight
+      roleplay: The character's eyes are milky, heavily scarred, or permanently covered.
+      mechanics: You are permanently Blinded, but have Blindsight to 30 feet. Beyond 30 feet you automatically fail sight-based ability checks and attacks from outside that radius have Advantage against you.
+    - name: Grotesque Visage
+      roleplay: The character is heavily mutated, severely scarred, or supernaturally unnerving.
+      mechanics: Disadvantage on Charisma (Persuasion) and Charisma (Performance). You may choose Advantage on Charisma (Intimidation) checks using Strength or Charisma.
+    - name: "Missing Limb: Arm"
+      roleplay: The character has only one functional arm.
+      mechanics: You cannot use Two-Handed weapons, benefit from a Shield, or use Two-Weapon Fighting. Mundane tasks strictly requiring two hands are made with Disadvantage.
+    - name: "Missing Limb: Leg"
+      roleplay: The character uses a peg leg, crutch, or heavy bracing.
+      mechanics: Base walking speed is reduced by 10 feet; Disadvantage on Dexterity (Acrobatics); standing from Prone uses your entire movement.
+  Social & Behavioral:
+    - name: Hunted / Wanted
+      roleplay: A powerful faction is actively tracking the character.
+      mechanics: Disadvantage on Charisma (Deception) and Charisma (Persuasion) with guards, bounty hunters, or officials. Once per adventure at DM discretion, pursuers interrupt a rest or ambush the party.
+    - name: Vow of Absolute Truth
+      roleplay: The character is incapable of telling a deliberate lie.
+      mechanics: Automatically fail Charisma (Deception). Disadvantage on Charisma (Persuasion) if the negotiation requires strategically omitting important relevant facts.
+    - name: Overwhelming Arrogance
+      roleplay: The character believes they are unequivocally the smartest, strongest, or most important person in the room.
+      mechanics: You cannot benefit from the Help action on ability checks. If an NPC insults or challenges your pride, make a DC 13 Charisma save or be compelled to escalate aggressively.
+  Biological & Constitution:
+    - name: Chronic Frailty
+      roleplay: The character suffers from a lingering illness, weak heart, or poor constitution.
+      mechanics: You suffer a -1 penalty to Constitution. After a Long Rest, regain only a quarter of your total Hit Dice (minimum 1), rather than half.
+    - name: Chemical Dependency
+      roleplay: The character is addicted to a specific substance and needs it to function.
+      mechanics: Consume a dose every 24 hours or gain 1 level of Exhaustion. Rest cannot remove this Exhaustion; consuming the substance or Lesser Restoration can.
+    - name: Heavy-Footed / Clumsy
+      roleplay: The character is notoriously loud and uncoordinated.
+      mechanics: Disadvantage on Dexterity (Stealth) and Dexterity (Sleight of Hand). On an attack roll of 1, you drop your weapon or spellcasting focus.
+  Mystical & Luck-Based:
+    - name: Jinxed / Unlucky
+      roleplay: The universe seems to have it out for the character.
+      mechanics: Give the DM a Jinx Token at the start of each session. The DM can spend it to force a reroll of one successful attack roll, saving throw, or ability check and take the lower result.
+    - name: Magical Susceptibility
+      roleplay: The character is uniquely vulnerable to hostile magic.
+      mechanics: Choose two elemental damage types and gain Vulnerability to them; alternatively, have Disadvantage on all saves against spells of one common school of magic.
+    - name: Restless Spirit (Insomnia)
+      roleplay: The character is plagued by nightmares, ghosts, or inability to sleep deeply.
+      mechanics: On each Long Rest, make a DC 10 Constitution save. On failure, gain only the benefits of a Short Rest. Another character can spend an hour soothing you with medicine or magic to grant Advantage on the save.

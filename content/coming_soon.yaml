@@ -1,0 +1,13 @@
+dingoes_crowns:
+  title: Dingoes & Crowns
+  text: Coming soon. The working game code is preserved in this build, but the page
+    is locked for now.
+people_places:
+  title: People & Places
+  text: This will fill in as the party meets people and discovers Teralis.
+campaign_journal:
+  title: Campaign Journal
+  text: Session recaps and shared discoveries will live here.
+letters_handouts:
+  title: Letters & Handouts
+  text: In-world documents and handouts will appear here when the party receives them.

@@ -1,46 +1,48 @@
-# Priscilla Player Portal — V2
+# Priscilla Player Portal — Public Hub
 
-A lightweight player-facing hub for **Priscilla, Queen of the Desert**.
+This build starts from the richer Streamlit portal that already contained the working
+Dingoes & Crowns implementation.
 
-This version intentionally removes character-management and magic-item sections.
-The immediate purpose is to give the players one attractive place for:
+## What changed
 
-- the recurring Sunday schedule
-- the original invitation
-- one low-pressure Voyage prompt
-- a light Party roster
-- the starting map / Known World
-- visible locked sections that will open as the campaign develops
+- Removed the PIN / player-login flow from the app.
+- Removed private-player pages from navigation.
+- Preserved the original backend architecture.
+- Preserved the original working D&C code in `portal/pages.py`.
+- D&C is currently **locked / Coming Soon**.
+- The public hub now focuses on:
+  - Home
+  - The Invitation
+  - Voyage Prep
+  - The Party
+  - Known World
+  - visible locked future sections
+- Added the Sunday schedule.
+- Added the starting map.
+- Made normal wording/settings editable without touching Python.
 
-## Schedule shown in the app
+## Files Sean can edit
 
-**Sunday — 6:00 PM**
+- `content/settings.yaml` — schedule wording and home image filename
+- `content/home.md` — home wording
+- `content/voyage.md` — Voyage Prep wording/examples
+- `content/party.yaml` — player/character roster and portrait filenames
+- `content/coming_soon.yaml` — locked-page wording
+- `assets/` — images and handouts
 
-Wrap by **8:30–9:00 PM at the latest**.
+## Dingoes & Crowns
 
-## Replace the existing GitHub files
+The original working implementation is still preserved in:
 
-Upload the contents of this folder into the root of the existing `Priscilla` repository.
+`portal/pages.py` → `dingoes_crowns(...)`
 
-Replace:
-- `app.py`
-- `README.md`
-- `requirements.txt`
+The current navigation does not expose it. Players see a locked Coming Soon page instead.
 
-Keep/upload the included `assets/` files.
+## GitHub / Streamlit
 
-Streamlit should continue using:
+Upload the contents of this ZIP into the root of the existing GitHub repository,
+replacing matching files.
 
-- Branch: `main`
-- Main file path: `app.py`
-
-Once GitHub commits the replacement, Streamlit Community Cloud should normally rebuild automatically.
-
-## Easy art swaps later
-
-The two portal-specific banner files are:
-
-- `assets/arrival_night.svg`
-- `assets/voyage_night.svg`
-
-They are intentionally separate from the app code so they can be replaced later with finished approved campaign paintings without rewriting the app.
+Streamlit stays on:
+- branch: `main`
+- main file: `app.py`

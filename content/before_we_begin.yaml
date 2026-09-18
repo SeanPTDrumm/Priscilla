@@ -1,0 +1,13 @@
+prompts:
+  - key: why_cross_sea
+    title: Why did you cross the sea?
+    help: >-
+      What persuaded your character to spend three months aboard an overcrowded ship bound for distant,
+      isolated, and decidedly peculiar Teralis? Were you escaping something, pursuing someone, obeying an
+      order, chasing wealth, seeking knowledge—or simply out of better ideas?
+  - key: how_map_reached_you
+    title: How did the map reach you?
+    help: >-
+      Your character begins with a map or letter that points toward Vane and promises 50 gold pieces.
+      Connect it to your voyage motivation, name a sender, say it arrived anonymously, or use the easy default:
+      Captain Dick Boatman handed it to you aboard ship. A sentence or two is enough.
