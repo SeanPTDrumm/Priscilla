@@ -1,4 +1,4 @@
-Episode 1 — The Gang Tries to Figure Out Where to Deliver State Secrets
+
 
 After three months at sea, five strangers finally reached the distant continent of Teralis.
 They had not begun the voyage as a party. They were simply five outsiders sharing a ship and, increasingly, one another’s business.
