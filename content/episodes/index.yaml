@@ -1,5 +1,5 @@
 episodes:
-  - number: 1
-    title: The One With Dingoes & Crowns
-    file: episode_01.md
-    published: true
+- number: 1
+  title: The One With Dingoes & Crowns
+  file: episode_01.md
+  published: true
