@@ -1,25 +1,14 @@
-# Voyage Prep
+The Crossing
 
-Your character spent about **three months aboard a crowded passenger ship** on the way to Teralis.
+Your character spent about **three months aboard a crowded passenger ship** on the way to Teralis.  
 
-Before we play, give **Your Friendly Dungeon Master** something about one NPC your character met or got to know during the voyage.
+Mund — Nora: During Mund’s campaign to work his way through the ship’s staff and eventually reach the captain’s table, he met a hard-edged young deckhand, around fourteen, who had once been a stowaway. Nora has been a legitimate member of the crew for more than a year by then. She hated pirates with an almost devotional intensity and talked often about finally getting the chance to defend the ship and kill one herself with her dagger.  She gave very detailed descriptions of what it would feel like and asked Mund what it felt like to kill someone. Mund, meanwhile, eventually succeeded in reaching the captain — and talked about punching and farming often enough to get banned from the table.
 
-This can be extremely brief or as elaborate as you want. You are not being asked to write a backstory.
+Chi — Sven & Oakland: Chi met a flamboyantly dressed bard named Sven, who behaved as though he had never encountered another human being before, judging by the endless stream of questions. Even the most mundane facts about his fellow travelers became unlistenable poetry accompanied by aggressive lyre playing. Fortunately, Sven had a dog. Chi spent much of the voyage connecting with him and learned that the dog’s actual name was Oakland, not Señor Biscuits.
+Wiccan — Orren: Wiccan became acquainted with Orren, an older deckhand assigned to night watch. One evening, the First Court summoned Wiccan’s mind without warning, leaving his body slack-jawed and unresponsive near the railing. Orren quietly pulled him to safety and stayed with him until he returned. He never demanded an explanation. Afterward, they often shared the night watch in comfortable silence, with Orren occasionally reminding him, “If you’re planning to leave your body again, sit down first.”
 
-## Easy examples
+Melvin — Melvin Cowsnarfski: Melvin met another elf wizard aboard ship: shy, awkward, extremely knowledgeable, and delighted to talk about magical items, gem resonances, and other arcane minutiae. His name, improbably, was also Melvin — Melvin Cowsnarfski. The party saw less and less of the original Melvin as the voyage went on. By the time they reached Teralis, the hat, the contract, and the identity all seemed to belong to the Melvin they knew. The exact details of how that happened are, perhaps, best left unexamined.
 
-- An older passenger I played cards with most nights.
-- A sailor I drank with a few times.
-- A merchant who annoyed me for almost the entire crossing.
-- A kid who kept asking questions about my weapon.
-- Someone who was terribly seasick and I ended up helping.
-- A passenger I became genuinely close to.
-- We talked on deck at night. I do not know much more about them yet.
+Ellie — During the crossing, Ellie regularly performed aboard ship with her harp, making her one of the more noticeable passengers on the voyage. At one point she found herself seated beside a friendly, talkative dragonborn blacksmith who repeatedly told her she had the strong hands of someone who would make an excellent blacksmith. He was so genuinely nice that Ellie had difficulty extracting herself from the conversation without feeling rude. He also had a cat named Slippers.
 
-**A name is optional. One sentence is enough.**
-
-## The map / instructions
-
-Unless you want something different, **Captain Dick Boatman gave you the map and instructions aboard ship.**
-
-If you would rather they came from somebody else, just tell **Your Friendly Dungeon Master** who. It can be the NPC above, another passenger, a sailor, or anyone else that makes sense.
+When you disembarked Captain Dick Boatman gave each person (one to share for Mund and Ellie) with the map and instructions to go to the Blue Oyster Inn.
