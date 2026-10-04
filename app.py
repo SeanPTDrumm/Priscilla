@@ -45,11 +45,11 @@ page_defs = [
         icon="🧭",
         url_path="people-places",
     ),
-    st.Page(
-        lambda: public_pages.locked(ROOT, "campaign_journal"),
-        title="Campaign Journal 🔒",
-        icon="📖",
-        url_path="campaign-journal",
+        st.Page(
+        lambda: public_pages.episodes(ROOT),
+        title="Episodes",
+        icon="🎬",
+        url_path="episodes",
     ),
     st.Page(
         lambda: public_pages.homebrew_common_law(ROOT),
