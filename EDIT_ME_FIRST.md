@@ -1,41 +1,30 @@
-# EDIT ME FIRST
+# EDITING THE PORTAL
 
-You can change the normal wording and images without editing Python.
+You should no longer need to edit GitHub files by hand for normal campaign updates.
 
-## The files you are most likely to edit
+Open the live portal and choose **✏️ Edit Portal** in the sidebar.
 
-### `content/home.md`
-Home-page words.
+From there you can edit:
 
-### `content/voyage.md`
-Everything written on Voyage Prep.
+- Episodes
+- Home
+- Voyage Prep
+- Known World intro
+- Session schedule
+- Locked-page wording
 
-### `content/homebrew.md`
-The words above the Original Invitation and Disadvantages PDFs.
+You can also create the next Episode directly in the app.
 
-### `content/party.yaml`
-Player names, character names, blurbs, and optional portrait filenames.
+## Make Save permanent
 
-### `content/settings.yaml`
-Session time wording and the filename of the home image.
+For edits to survive Streamlit redeploys, complete the one-time GitHub Secrets setup in `README.md`.
 
-### `content/coming_soon.yaml`
-Words shown on locked pages.
+Once that is configured, clicking **Save** in the portal commits the update back to GitHub automatically.
 
-### `assets/`
-Images, PDFs, maps and portraits.
+## Party profiles
 
-## Changing an image
+Players can upload portraits and edit what the others know about their characters on **The Party** page. Those can also be made permanent using the same GitHub Secrets setup.
 
-Upload the replacement image into `assets/`.
+## Dingoes & Crowns
 
-For the Home image, either:
-- replace `assets/home_harbor_night.png` with another image using the same filename, or
-- change `home_hero:` in `content/settings.yaml`.
-
-## Important
-
-You normally should **not** need to edit `app.py`.
-
-Dingoes & Crowns is intentionally locked. Its original working code remains preserved in
-`portal/pages.py`.
+Dingoes & Crowns remains intentionally locked. The older working prototype is still preserved in `portal/pages.py` for later rescue/rework.

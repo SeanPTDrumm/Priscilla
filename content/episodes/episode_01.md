@@ -1,5 +1,3 @@
-# Episode 1 — The One With Dingoes & Crowns
-
 ## Previously… on *Priscilla, Queen of the Desert*
 
 Three months at sea.

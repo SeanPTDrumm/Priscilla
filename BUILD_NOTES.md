@@ -1,30 +1,47 @@
-# Build Notes — September 12, 2026
+# Build Notes — Editable Player Portal Refresh
 
-## Implementation plan used
+## Goal
 
-1. Keep the Player Portal physically and logically separate from the DM Codex.
-2. Put authorization in the server-side repository layer, not in hidden UI widgets.
-3. Use SQLite for local persistence and PBKDF2-hashed PINs for friendly table privacy.
-4. Build the useful pre-game workflow first: voyage motivation, voyage NPC, map/letter origin, and private item view.
-5. Keep public sections empty-by-default and publish-only.
-6. Make Dingoes & Crowns useful now without inventing missing core result rules.
-7. Add DM review/publishing tools and automated role-isolation tests.
+Reset the Player Portal around one simple rule: normal campaign maintenance should happen **inside the portal**, not by hand-editing Python or Markdown in GitHub.
 
-## Source/access gaps
+## Current public structure
 
-The runtime used for this build could read the uploaded Player Portal seed, player invitation, current Disadvantages handout, and supplied cover image. It could **not** access Sean's Windows project root at:
+- Home
+- Voyage Prep
+- The Party
+- Known World
+- Episodes
+- Dingoes & Crowns — locked
+- People & Places — locked
+- Homebrew & Common Law
+- Edit Portal
 
-`C:\Users\seanp\.codex\.chatgpt-projects\g-p-6a89ff2c3df88191806b50b814277ec5`
+## Episodes
 
-Therefore it could not directly confirm `campaign_updates/` readability or create the folder as a true sibling on that drive. This downloadable folder should be placed there as `Priscilla_Player_Portal_Streamlit/`.
+Campaign Journal has been replaced by **Episodes**.
 
-The exact named sources below were also not available in the accessible uploaded/File Library sources:
+Episode 1 is included as:
 
-- `campaign_updates/PC_CARDS_AND_MAGIC_ITEMS_SEED.md`
-- `priscilla-player-portal-mockup.html`
+**The One With Dingoes & Crowns**
 
-Those gaps did not block the safe prototype. Private item content was left blank rather than reconstructed, and the visual treatment follows the seed's written description pending comparison with the approved mockup.
+Episode metadata lives in `content/episodes/index.yaml`, while recap bodies live in individual Markdown files. The Edit Portal UI manages both.
 
-## Verification
+## Persistence
 
-Backend syntax compilation succeeded and all seven automated tests passed, including cross-player isolation for private prompt answers, notes, starting items, and voyage-NPC drafts.
+Streamlit Community Cloud local disk is not reliable across redeploys. The new persistence layer in `portal/storage.py` therefore supports committing edits back to the GitHub repository through the GitHub Contents API.
+
+When `GITHUB_TOKEN` and `GITHUB_REPO` are configured in Streamlit Secrets:
+
+- editor changes persist
+- party blurbs persist
+- party portrait uploads persist
+
+Without those secrets, changes still work in the current running instance but may disappear after a redeploy.
+
+## Party profiles
+
+The old `open_party_profiles` SQLite workflow is no longer used by the public Party page. Player text now lives in `content/party_profiles/` and portraits in `assets/party_portraits/`, allowing the same GitHub-backed persistence model as the rest of the portal.
+
+## Preserved legacy code
+
+The original repository/database modules and the earlier Dingoes & Crowns prototype remain in place so useful work is not destroyed during the reset. They are not used for ordinary editable portal content.

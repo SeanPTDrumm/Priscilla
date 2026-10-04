@@ -1,75 +1,78 @@
-# Priscilla Player Portal — Public Hub
+# Priscilla Player Portal — Editable Build
 
-This build starts from the richer Streamlit portal that already contained the working
-Dingoes & Crowns implementation.
+This is the refreshed public player portal for **Priscilla, Queen of the Desert**.
 
 ## What changed
 
-- Removed the PIN / player-login flow from the app.
-- Removed private-player pages from navigation.
-- Preserved the original backend architecture.
-- Preserved the original working D&C code in `portal/pages.py`.
-- D&C is currently **locked / Coming Soon**.
-- The public hub now focuses on:
-  - Home
-  - The Invitation
-  - Voyage Prep
-  - The Party
-  - Known World
-  - visible locked future sections
-- Added the Sunday schedule.
-- Added the starting map.
-- Made normal wording/settings editable without touching Python.
+- **Campaign Journal** is now **Episodes**.
+- Episode 1 is included as **The One With Dingoes & Crowns**.
+- Added an in-app **Edit Portal** page.
+- You can edit the Home page, Voyage Prep, Known World intro, session schedule, locked-page text, and all Episodes **without touching Python**.
+- You can create Episode 2, Episode 3, and so on directly in the app.
+- Party blurbs and portraits no longer use the old SQLite profile table. They are saved as normal repository files.
+- The original Dingoes & Crowns implementation is preserved in `portal/pages.py` and remains locked for now.
 
-## Files Sean can edit
+## The one important setup: make Save permanent
 
-- `content/settings.yaml` — schedule wording and home image filename
-- `content/home.md` — home wording
-- `content/voyage.md` — Voyage Prep wording/examples
-- `content/party.yaml` — player/character roster and portrait filenames
-- `content/coming_soon.yaml` — locked-page wording
-- `assets/` — images and handouts
+Streamlit Community Cloud can erase files written only to its local disk during a redeploy. This build therefore knows how to save edits **back to your GitHub repository**.
 
-## Dingoes & Crowns
+You only have to configure this once.
 
-The original working implementation is still preserved in:
+### 1. Create a GitHub fine-grained personal access token
 
-`portal/pages.py` → `dingoes_crowns(...)`
+In GitHub, create a fine-grained token that has access only to this Priscilla repository and grant it:
 
-The current navigation does not expose it. Players see a locked Coming Soon page instead.
+- **Contents: Read and write**
 
-## GitHub / Streamlit
+You do not need broader account permissions.
 
-Upload the contents of this ZIP into the root of the existing GitHub repository,
-replacing matching files.
+### 2. Add these to Streamlit Secrets
 
-Streamlit stays on:
+Open the deployed Streamlit app settings → **Secrets** and add:
+
+```toml
+GITHUB_TOKEN = "paste-your-token-here"
+GITHUB_REPO = "YOUR-GITHUB-USERNAME/Priscilla"
+GITHUB_BRANCH = "main"
+```
+
+Optional: if you do not want every person with the portal link to use Edit Portal, add:
+
+```toml
+EDITOR_PASSWORD = "whatever-password-you-want"
+```
+
+If `EDITOR_PASSWORD` is omitted, editing is intentionally open to anyone with the portal URL.
+
+**Never put the GitHub token directly into a file in this repository.** Keep it only in Streamlit Secrets.
+
+## Normal use after setup
+
+Open the portal and choose **✏️ Edit Portal** from the sidebar.
+
+From there you can:
+
+- edit Episode 1
+- change its title
+- publish/unpublish it
+- create the next episode
+- edit Home
+- edit Voyage Prep
+- edit the Known World intro
+- change the Sunday schedule wording
+- change Coming Soon text
+
+Click **Save**. The app updates immediately and commits the change back to GitHub, so it survives future Streamlit redeploys.
+
+## Party page
+
+Each player can still upload a portrait and type what the others know about their character. With the GitHub Secrets above configured, those entries are also committed to the repository and persist across redeploys.
+
+## Deploying this replacement
+
+Replace the files in the existing GitHub repository with the contents of this build and keep Streamlit pointed to:
+
 - branch: `main`
 - main file: `app.py`
 
-
-## Current small revisions
-
-- Voyage Prep is the second navigation item.
-- The Invitation is viewed directly in the app; no download is required.
-- The Home harbor art was recropped as a clean wide banner.
-
-## Gold-standard content patch
-
-- Kept the current basic visual style unchanged.
-- Removed the standalone Invitation page.
-- Added active **Homebrew & Common Law** with the Original Invitation and Disadvantages PDFs embedded in the app.
-- Standardized player-facing references to the DM as **Your Friendly Dungeon Master**.
-
-## v3.1 Party page
-
-The Party page now starts with first names only. Each player can:
-- upload / replace a portrait
-- write what the other passengers may have learned about their character
-- save it directly in the app
-
-No login is required.
-
-Important: Streamlit Community Cloud does not provide durable local disk storage across redeploys.
-The live entries survive normal page use, but a redeploy may reset them. Copy anything important
-into the campaign record before replacing the app again.
+The existing public Streamlit URL can remain the same.
