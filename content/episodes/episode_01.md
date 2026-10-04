@@ -1,199 +1,100 @@
-## Previously… on *Priscilla, Queen of the Desert*
+Episode 1 — The Gang Tries to Figure Out Where to Deliver State Secrets
 
-Three months at sea.
+After three months at sea, five strangers finally reached the distant continent of Teralis.
+They had not begun the voyage as a party. They were simply five outsiders sharing a ship and, increasingly, one another’s business.
 
-Five strangers crossed an ocean to the distant continent of **Teralis**, each arriving for reasons of their own.
+There was Wiccan, a young Shadar-kai warlock whose pact had left him violet-skinned, pink-eyed, and equipped with a ghostly replacement for his missing left hand.   Ellie, nearly seven feet tall, traveled in chainmail with a full-sized harp and had already spent part of the crossing performing for the other passengers. Her adopted older brother Mund was a remarkably ugly dwarf whose interests appeared to center on farming, punching, and dirt.  Melvin Half-Elvin presented himself as a wizard for hire and task mage, carrying a wind-powered magical implement that looked suspiciously like a clarinet. There were, for reasons not yet entirely clear, once two Melvins aboard the ship. By the end of the voyage, the other one was seen considerably less often.
+And then there was Chi, a weathered druid who found many of the animals aboard ship more interesting than their owners. This proved particularly useful when he befriended the dog belonging to a flamboyant bard named Sven. Sven called the dog Señor Biscuits. The dog informed Chi that his name was actually Oakland.
+The voyage ended at approximately four in the morning.
 
-There was **Wiccan**, a Shadar-kai warlock with violet skin, pink eyes, and a ghostly left hand.
+Sydire appeared first as scattered lights against the dark coast. As the ship entered the harbor, the city gradually resolved around them: two pale towers flanking the entrance, an enormous iron chain stretched across the harbor mouth, and far above the docks, Oxley Hall overlooking the sleeping city.
+Before the passengers scattered into Teralis, the five were given the same strange instructions:
 
-**Ellie**, nearly seven feet tall, clad in chainmail and carrying a full-sized harp.
+Go to the Blue Oyster Inn. Ask for Madam Lavine.
 
-Her spectacularly ugly adopted brother, **Mund**, a dwarf with an abiding love of dirt.
+The Blue Oyster
+The Blue Oyster Inn turned out to be an enormous, crooked dockside establishment that appeared to have been built, expanded, damaged, repaired, and expanded again without anyone ever consulting the original plans.
+Inside were sailors, travelers, gamblers, questionable decisions, and a fortune teller whose corner of the inn contained enough open flame to alarm the proprietors.
+Mund settled in quickly. When asked whether he wanted his liquor brown or clear, he answered with the conviction of a man expressing a deeply held philosophical belief:
+“Brown. Like the dirt.”
 
-**Melvin Half-Elvin**, wizard for hire, task mage, and proud owner of a wind-powered magical wand that looks suspiciously like a clarinet.
-
-And **Chi**, a weathered druid who spent much of the voyage talking to animals — including a dog called Señor Biscuits, who informed him that his real name was actually **Oakland**.
-
-At approximately four in the morning, before sunrise, their ship finally entered the harbor of **Sydire**.
-
-An enormous iron chain stretched across the harbor mouth between two white towers.
-
-High above the sleeping city stood **Oxley Hall**.
-
-And before leaving the ship, the five were given a set of mysterious instructions:
-
-**Go to the Blue Oyster Inn.**
-
-**Ask for Madam Lavine.**
-
-And say:
-
-> **“Don’t fear the reaper.”**
-
-The Blue Oyster proved to be a sprawling, crooked dockside inn full of gamblers, strangers, questionable decisions, and — in Madam Lavine’s corner — far too many candles.
-
-Mund ordered liquor.
-
-When asked whether he wanted brown or clear, he answered:
-
-> **“Brown. Like the dirt.”**
-
-Melvin demonstrated his magical talents by turning Chi’s pale ale red in a burst of theatrical sparks.
-
-This was not especially appreciated by the proprietor, who was already concerned that Madam Lavine was going to burn the building down.
-
-Then came **Dingoes & Crowns**.
-
-Wiccan bet on all evens.
-
-Chi bet on all odds.
-
-Ellie bet on Dingoes.
-
-Melvin bet on sixes.
-
+Melvin demonstrated his magical credentials by transforming Chi’s pale ale into a different color with a flourish of Prestidigitation. This would have been more impressive had the innkeeper not already been preoccupied with the possibility that Lavine’s collection of candles was going to burn the building down.
+Then someone discovered Dingoes & Crowns.
+Wiccan put his money on evens. Chi took the odds. Ellie bet on Dingoes. Melvin bet on sixes.
 Melvin won.
-
 Chi and Ellie did not.
-
-Eventually, the party found Madam Lavine.
-
-Before getting down to business, Mund requested a love reading.
-
-Lavine informed him that somewhere in Teralis was his perfect partner.
-
-Possibly with a missing facial feature.
-
-Or eye.
-
-And that they would meet within the next moon cycle.
-
-The party immediately concluded that Mund had approximately thirty days to plan his wedding.
-
-Then someone finally said the words:
-
-> **“Don’t fear the reaper.”**
+This was not the last questionable financial decision of the evening.
+Madam Lavine
+Eventually the five made their way to Madam Lavine, although Mund first decided that the important question was not why five mysterious strangers had been sent across an ocean to meet a fortune teller in the middle of the night.
+The important question was his love life.
+Lavine assured him that his perfect partner existed somewhere in Teralis. The details became somewhat less encouraging when she suggested this individual might be missing a facial feature. Possibly an eye.
+The meeting, she said, would happen within the next moon cycle.
+The party immediately interpreted this as:
+Mund has thirty days to plan a wedding.
+Only after this did someone finally deliver the phrase they had been given.
+“Don’t fear the reaper.”
 
 Lavine produced five small bags.
+Each contained fifty gold pieces.
+She did not know who had arranged the payment. She could not tell them why anyone had done so. Someone had simply paid her and instructed her to give the gold to five strangers who arrived with those words.
+Then the performance stopped.
 
-Each contained **fifty gold pieces**.
+Lavine’s manner changed. Her attention seemed to move away from the room and toward something none of them could see.
+And she spoke.
 
-She did not know who had arranged the payment.
+Five strangers come by water beneath a dead man’s star.
+Before the sun rises, blood will answer blood,
+and what was stolen from the dead will choose the road ahead.
+You will carry a crown without wearing it.
+When the earth turns red, remember what was freely given.
+And one of you already has something waiting on the other side of sleep.
 
-She did not know why.
-
-But those were the instructions she had been given.
-
-And then something changed.
-
-Lavine stopped performing.
-
-Her voice changed.
-
-Her eyes fixed on something none of them could see.
-
-And she spoke:
-
-> **Five strangers come by water beneath a dead man’s star.**
->
-> **Before the sun rises, blood will answer blood,**
->
-> **and what was stolen from the dead will choose the road ahead.**
->
-> **You will carry a crown without wearing it.**
->
-> **When the earth turns red, remember what was freely given.**
->
-> **And one of you already has something waiting on the other side of sleep.**
-
-For the final line, Lavine turned toward Wiccan.
-
-And then, just as suddenly, she was herself again.
-
-With no apparent memory of what she had said.
-
-Chi attempted to get some more practical fortune-telling advice.
-
-Lavine told him:
-
-A decision involving **soup** would not disappoint him.
-
-He was going to **lose money gambling tonight**.
-
+On the final line, Lavine turned toward Wiccan.
+Then, as abruptly as it had begun, it was over.
+Lavine returned to herself with no apparent memory of what she had just said.
+Chi, sensibly deciding that mystical prophecy should occasionally produce usable information, asked for something more practical.
+He received three pieces of advice.
+A decision involving soup would not disappoint him.
+He was going to lose money gambling tonight.
 And:
+“Don’t take the left stairs.”
 
-> **“Don’t take the left stairs.”**
+Lavine also recommended a bathhouse nearby.
+At this point, none of them had any reason to suspect that the soup might ultimately prove to be the clearest guidance they received all evening.
 
-She also recommended a nearby bathhouse.
 
-Before anyone could fully process any of that, two men entered the Blue Oyster.
 
-One introduced himself as **Sir William Mulberry**.
-
-The other was his man, **Burns**.
-
-Mulberry had a job.
-
-A footman from Oxley Hall had stolen a sensitive letter from the room of the **High Confessor**.
-
-The thief was believed to be meeting agents from **Ashmark** at **Pier 9**, where they intended to escape Sydire by barge before dawn.
-
-Mulberry wanted the letter recovered.
-
+A Job Offer
+Before they could make much sense of the prophecy, two men entered the Blue Oyster.
+One introduced himself as Sir William Mulberry.
+The other was Burns.
+Mulberry represented interests connected to Oxley Hall, and he had a problem.
+A footman named Edwin Rusk had stolen a sensitive letter from the room of the High Confessor. Rusk was believed to be meeting agents associated with Ashmark at Pier 9, where the letter would leave Sydire by barge before dawn.
+Mulberry wanted it recovered.
 Quietly.
+For this, he offered them another fifty gold pieces each.
+The five strangers carefully considered their options.
+They considered accepting Mulberry’s offer.
+They considered whether Ashmark might pay better.
+They considered the broader political implications of possessing stolen correspondence from one of the most important households in Sydire.
+Mund eventually reduced the strategic problem to its essentials:
+Do the job. Get the gold.
+So they signed.
+The contract described their responsibilities with reassuring legal precision:
+“Miscellaneous tasks as required.”
 
-The payment:
-
-**Fifty gold pieces each.**
-
-The party considered the proposition.
-
-They considered the possibility of taking the job.
-
-They considered whether Ashmark might make a better offer.
-
-Eventually, Mund distilled the situation to its essentials:
-
-Do the job.
-
-Get the gold.
-
-And so they signed.
-
-The contract described their duties with reassuring specificity as:
-
-> **“Miscellaneous tasks as required.”**
-
-Before setting out, Ellie decided the group required inspiration.
-
-She produced her harp.
-
-And delivered a spoken-word performance powerful enough to make everyone feel considerably harder to kill.
-
-Chi joined in on pan flute.
-
-Melvin contributed with the clarinet-like magical wand.
-
-It was, in its own way, magnificent.
-
+Before leaving, Ellie decided that what this newly assembled criminal-adjacent contracting company needed was morale.
+She brought out the harp.
+What followed was less a song than a spoken-word motivational performance, but whatever it was, it worked. Chi joined with his pan flute. Melvin accompanied them using the clarinet-like magical wand.
+Against all reasonable expectation, everyone felt considerably harder to kill afterward.
 Sir William Mulberry departed.
+Burns did not.
+Outside, Sydire remained dark.
+Somewhere along the waterfront, the footman Edwin Rusk was preparing to leave the city with a stolen letter.
 
-Burns remained.
+Ashmark’s people were waiting.  And five people who had known one another for less than a day were about to walk directly into the middle of it.
 
-And somewhere in the darkness beyond the Blue Oyster, **Pier 9** waited.
+Madam Lavine had already told them what came next:
 
-Before sunrise, a stolen letter was leaving Sydire.
-
-Ashmark agents were waiting for it.
-
-And five strangers who had known one another for less than a day were about to walk directly into the middle of it.
-
-Because Madam Lavine had already warned them:
-
-> **Before the sun rises, blood will answer blood.**
->
-> **And what was stolen from the dead will choose the road ahead.**
-
-## And now…
-
-# *PRISCILLA*
+Before the sun rises, blood will answer blood.
+And what was stolen from the dead will choose the road ahead.
