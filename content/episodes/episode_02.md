@@ -1,24 +1,42 @@
 Episode 2 was basically “the gang spends an hour avoiding violence, then accidentally creates a dockside war anyway.”
 
-The session opened with a lot of useful cleanup that actually became part of the game. Burns confirmed he would accompany them to Pier 9 and personally take the stolen document once they recovered it; his whole thing is that they “won’t notice” him even though he is well dressed and carrying a large wooden desk/box around. Ellie left her huge harp in the room they rented at the Blue Oyster, and the party established some practical travel details like rooming, wine/water, armor, and gear. Chi also summoned a seagull familiar named Wilson, immediately got told by the Rians that seagulls were not allowed in the common room, and sent him to wait on the roof.    
+With Sir William Mulberry gone and Burns still quietly attached to the group, the party finally prepared to leave the Blue Oyster and head for Pier 9. Before setting out, they handled some practical business: Ellie rented a waterfront room for the group and left her enormous harp behind, Chi arranged to sleep on the roof in exchange for keeping an eye on its structural integrity, and wineskins were filled. Burns confirmed that he would accompany them and personally take the stolen document once they recovered it, while continuing to insist that they would hardly notice he was there. 
 
-There was also a surprisingly important rules/culture section. The group formally adopted courtesan as the Teralis umbrella term, with dockside/house/salon distinctions. You also created a house rule where each player can award Inspiration to another player once per session, and duplicate Inspiration can be converted to 10 gp.    
+There was also time to establish several important facts of life in Teralis. “Courtesan” became the accepted umbrella term for the world’s professional companions, with dockside, house, and salon courtesans occupying different social tiers. A new Inspiration rule was also settled: each player may award Inspiration to another player once per session, and receiving Inspiration while already holding it can instead be converted into ten gold pieces.  
 
-On the way to Pier 9, they passed 58 Dockside and met Kit and Vivian. The two were clearly dockside courtesans; Vivian was older, stern, dark-haired, and territorial about their patch, while Kit was younger, red-haired, freckled, and initially worked Melvin before moving on to Chi. The standard offer played at the table was 3 sp for an hour / 1 gp for the night. Ellie tipped them and asked what they had seen, and they revealed that something was happening around Piers 8–9 and that the men there probably worked for Lord Compton, who owned barges in the area.    
+Chi then summoned a familiar: a seagull named Wilson. Wilson’s first official act was to be immediately banned from the common room by the Rian family. Chi therefore sent him to wait on the roof, where he could reflect on the indignities suffered by magical birds everywhere.    
 
-The party then reached the two outer guards. Melvin tried the “we’re just urgently going to Dock 10” approach, but the guards simply refused to let them through. Wiccan tried to Charm both; one failed the save and became friendly, while the other realized magic had been used. That argument was the moment the situation finally tipped into initiative.    
+On the way toward Pier 9, the party passed 58 Dockside, a bathhouse and brothel marked by a battered sign and occupied out front by two dockside courtesans. Vivian, older, dark-haired, stern, and clearly protective of their territory, and Kit, younger, red-haired, freckled, and considerably more forward, immediately assessed the newcomers as potential customers. Kit tried Melvin first and then moved on to Chi. The going rate was three silver for an hour or one gold for the night. Ellie declined politely, tipped them both, and asked whether they had noticed anything unusual nearby.    
 
-Then Melvin used the smoke effect from his wand, creating a huge heavily obscured cloud around the checkpoint. The party tried to rush through it; one guard eventually blew the warning whistle, alerting the rest of Pier 9. The smoke also turned out to be way more consequential than expected: at least one guard blundered into the harbor while disoriented.    
+They had. Something was happening around Piers 8 and 9, where armed men were keeping people away. Vivian believed they worked for Lord Compton, who owned barges along that stretch of the waterfront. The party continued on.   
 
-Once the alarm went up, Pier 9 became the real fight. The two barges began casting off, crossbowmen started firing, and the players were forced to split attention between enemies and the escaping boats. Chi Wild Shaped into a lion, charged through the battlefield, and later leapt onto a barge.    
+Two guards blocked the route before Pier 9: one a bald dwarf with sword and shield, the other a thin human with a spear and wispy beard. Both carried crossbows. Beyond them, Pier 9 was only partly visible in the predawn darkness: wet black timber, stacks of crates and covered cargo, a huge wooden crane looming over the water, and two barges tied on opposite sides of the pier. Men were already moving hurriedly among the cargo and working the mooring lines.    
 
-At one point, Chi finally got a clear look at a young man in blue-and-silver livery dressed like a footman aboard one of the barges — essentially the first real sighting of Edwin in the chaos.   
+Melvin attempted diplomacy, explaining that the party had urgent business at Dock 10 and absolutely no interest whatsoever in whatever might be happening at Dock 9. The guards were unmoved. Wiccan then tried another peaceful solution: magic.
 
-The fight got increasingly ridiculous in a good way. Wiccan was Misty Stepping around and blasting guards. Chi, as a lion, mauled one guard to death. Mund made a running jump onto a moving barge. Ellie got onto a barge and started trying to row it, accidentally running over one of the guards who had fallen into the harbor — which she later summarized as:
+He attempted to charm both guards.
+One fell for it.
+The other very much did not.
+For a few moments the two guards actually argued with one another—one suddenly convinced that these strangers seemed perfectly trustworthy, the other insisting that Wiccan had just cast magic on them. Then weapons came out and initiative was rolled.  
 
-“I crushed a man with a boat.”
+Melvin immediately turned the checkpoint into chaos by producing a thick cloud of black smoke around the guards. The party rushed through it while visibility collapsed. The trick worked surprisingly well, although not quietly: one guard eventually sounded a warning whistle, alerting the men farther down the pier, and at least one very confused guard wound up in the harbor. 
+
+Now Pier 9 exploded into motion.
+Crossbowmen opened fire. The barges began casting off. Guards hurried to cut lines and get the vessels away from shore. Wiccan used Misty Step to leap forward through the fight and began hurling Eldritch Blasts down the dock. Ellie advanced with a magically glowing warhammer. Melvin tried to use cover while sprinting toward the crane. And Chi transformed into a lion.  
+
+As the boats pulled away, Chi caught sight of the man they were looking for: a young man in blue-and-silver livery, dressed like a footman, aboard one of the escaping barges. Edwin Rusk was real, he was here, and he was getting away. 
+
+What followed became less a controlled interception and more an escalating waterfront disaster.
+
+Chi, still in lion form, made a running leap onto one of the barges and mauled a guard to death before jumping back toward the dock. Mund sprinted and made his own leap onto a moving barge. Wiccan kept teleporting across the battlefield and blasting guards. Melvin ran toward the crane, trying to determine whether it could somehow be used to stop or board the escaping vessel.  It can!
+
+Ellie found herself aboard the other barge with Mund and tried to work one of its oars. Lacking any meaningful knowledge of barge handling, she nevertheless managed to drive it back toward the dock—
+—and directly over one of the guards who had fallen into the water.
+
+Her later summary was concise:
+“I crushed a man with a boat.”  
+
+By the time the session ended, the party had transformed what was supposed to be a quiet recovery of stolen correspondence into a full dockside battle. Guards were dead, drowning, fleeing, or firing from the barges. Chi was a battle-scarred lion. Ellie and Mund had effectively commandeered one vessel. Melvin was racing toward the crane. Wiccan had reached the other barge, spied Edwin, and was still blasting the rowing guards.  But the barge continues to move further.
 
 
-The session ended mid-fight, not with the Pier 9 mission resolved. The barges were already pulling away; Ellie and Mund were dealing with one barge, Wiccan had gotten onto the other and blasted a guard, on that barge Wiccan sees the footman in Blue and Silver livery.  Chi was bouncing between dock/barge positions in lion form, and Melvin was sprinting toward the crane trying to figure out how to use it. 
-
-The final beat was essentially: the correct barge is getting farther from shore, the party is scattered across dock and boats, several guards are dead or in the water, and Edwin/the letter are still not secured
+To be continued.
